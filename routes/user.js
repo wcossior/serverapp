@@ -15,6 +15,7 @@ router.post("/add", [
 ], userController.add);
 
 router.get("/list", auth.verifyAdmin, userController.list);
+router.get("/query", auth.verifyAdmin, userController.query);
 router.put("/update/:id", [
     check("fullName", "El nombre es obligatorio.").not().isEmpty(),
     check("email", "Ingrese un email valido.").isEmail(),
