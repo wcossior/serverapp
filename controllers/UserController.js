@@ -23,7 +23,11 @@ export default {
                     response: {
                         status: "error",
                         http_code: "400",
-                        errors: ["Este email ya esta en uso. Elige otro"]
+                        errors: [{
+                            "value": "",
+                            "msg": "Este email ya esta en uso. Elige otro",
+                            "param": "",
+                            "location": ""}]
                     },
                     data: {}
                 });
@@ -46,7 +50,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -71,7 +79,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -98,7 +110,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -125,7 +141,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -155,7 +175,11 @@ export default {
                         response: {
                             status: "error",
                             http_code: "400",
-                            errors: ["Este email ya esta en uso. Elige otro"]
+                            errors: [{
+                                "value": "",
+                                "msg": "Este email ya esta en uso. Elige otro",
+                                "param": "",
+                                "location": ""}]
                         },
                         data: {} 
                     });
@@ -192,7 +216,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -220,7 +248,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -262,7 +294,11 @@ export default {
                         response: {
                             status: "error",
                             http_code: "404",
-                            errors: ["Email o contraseña incorrectos"]
+                            errors: [{
+                                "value": "",
+                                "msg": "Email o contraseña incorrectos",
+                                "param": "",
+                                "location": ""}]                            
                         },
                         data: {}
                     });
@@ -272,7 +308,11 @@ export default {
                     response: {
                         status: "error",
                         http_code: "404",
-                        errors: ["El usuario no existe"]
+                        errors: [{
+                            "value": "",
+                            "msg": "El usuario no existe",
+                            "param": "",
+                            "location": ""}]
                     },
                     data: {}
                 });
@@ -283,7 +323,12 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",                        
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""
+                    }]
                 },
                 data: {}
             });

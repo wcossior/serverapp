@@ -31,7 +31,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -56,7 +60,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -99,7 +107,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
@@ -126,7 +138,11 @@ export default {
                 response: {
                     status: "error",
                     http_code: "500",
-                    errors: ["huvo un error interno del servidor"]
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
                 },
                 data: {}
             });
