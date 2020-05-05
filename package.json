@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "it is a server for app mobile",
   "main": "index.js",
+  "engines": {
+    "node": "12.13.1"
+  },
   "scripts": {
     "start": "babel-node index.js",
     "dev": "nodemon index.js --exec babel-node"
