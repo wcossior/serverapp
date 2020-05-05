@@ -42,6 +42,51 @@ export default {
             next(e);
         }
     },
+    query: async (req, res, next) =>{
+        try {
+            const reg = await models.Offer.findOne({_id: req.query._id});
+            if (!reg) {
+                res.status(404).send({
+                    response: {
+                        status: "error",
+                        http_code: "500",
+                        errors: [{
+                            "value": "",
+                            "msg": "La oferta no existe",
+                            "param": "",
+                            "location": ""}]
+                    },
+                    data: {}
+                })
+            }else{
+                res.status(200).json({ 
+                    response: {
+                        status: "ok",
+                        http_code: "200",
+                        errors: []
+                    },
+                    data: {
+                        reg
+                    }
+                });
+            }
+            
+        } catch (e) {
+            res.status(500).send({
+                response: {
+                    status: "error",
+                    http_code: "500",
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
+                },
+                data: {}
+            });
+            next(e);
+        }
+    },
     list: async (req, res, next) => {
         try {
             const reg = await models.Offer.find();
