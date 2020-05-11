@@ -8,6 +8,7 @@ router.post("/add",
     [
         check("name", "El nombre es obligatorio.").not().isEmpty(),
         check("price", "El precio es obligatorio").not().isEmpty(),
+        check("category", "La categoría es obligatoria").not().isEmpty(),
         check("price", "El precio debe ser un valor numérico").isNumeric(),
         check("img", "Al menos una imágen es obligatorio y un máximo de 4 imágenes").isArray({ min: 1, max: 4 })
     ], auth.verifyUser, offerController.add);
@@ -17,6 +18,7 @@ router.put("/update/:id",
     [
         check("name", "El nombre es obligatorio.").not().isEmpty(),
         check("price", "El precio es obligatorio").not().isEmpty(),
+        check("category", "La categoría es obligatoria").not().isEmpty(),
         check("price", "El precio debe ser un valor numérico").isNumeric(),
         check("img", "Al menos una imágen es obligatorio y un máximo de 4 imágenes").isArray({ min: 1, max: 4 })
     ], auth.verifyUser, offerController.update);

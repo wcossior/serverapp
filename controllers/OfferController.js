@@ -135,6 +135,7 @@ export default {
                 name: req.body.name,
                 price: req.body.price,
                 img: req.body.img,
+                category: req.body.category
             });
 
             res.status(200).json({
