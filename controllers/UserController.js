@@ -63,7 +63,7 @@ export default {
     },
     query: async (req, res, next) =>{
         try {
-            const reg = await models.User.findOne({_id: req.query._id});
+            const reg = await models.User.findOne({_id: req.query._id}).populate("offer");
             if (!reg) {
                 res.status(404).send({
                     response: {

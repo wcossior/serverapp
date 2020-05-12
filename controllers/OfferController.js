@@ -44,7 +44,7 @@ export default {
     },
     query: async (req, res, next) =>{
         try {
-            const reg = await models.Offer.findOne({_id: req.query._id});
+            const reg = await models.Offer.findOne({_id: req.query._id}).populate("user");
             if (!reg) {
                 res.status(404).send({
                     response: {
@@ -89,7 +89,7 @@ export default {
     },
     list: async (req, res, next) => {
         try {
-            const reg = await models.Offer.find();
+            const reg = await models.Offer.find().populate("user");
             res.status(200).json({
                 response: {
                     status: "ok",
@@ -135,7 +135,7 @@ export default {
                 name: req.body.name,
                 price: req.body.price,
                 img: req.body.img,
-                category: req.body.category
+                category: req.body.category                
             });
 
             res.status(200).json({
