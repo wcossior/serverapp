@@ -13,7 +13,7 @@ router.post("/add",
         check("img", "Al menos una imágen es obligatorio y un máximo de 4 imágenes").isArray({ min: 1, max: 4 })
     ], auth.verifyUser, offerController.add);
 router.get("/list", auth.verify, offerController.list);
-router.get("/query", auth.verifyAdmin, offerController.query);
+router.get("/query", auth.verify, offerController.query);
 router.put("/update/:id",
     [
         check("name", "El nombre es obligatorio.").not().isEmpty(),
