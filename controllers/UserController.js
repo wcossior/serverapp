@@ -106,6 +106,36 @@ export default {
             next(e);
         }
     },
+    myoffers: async (req, res, next) => {
+        try {
+            const reg = await models.User.find({_id: req.query._id}).populate("offer",{"user":0}).select({ "offer": 1, "_id": 0});
+            
+            res.status(200).json({
+                response: {
+                    status: "ok",
+                    http_code: "200",
+                    errors: []
+                },
+                data: {
+                    reg
+                }
+            });
+        } catch (e) {
+            res.status(500).send({
+                response: {
+                    status: "error",
+                    http_code: "500",
+                    errors: [{
+                        "value": "",
+                        "msg": "huvo un error interno del servidor",
+                        "param": "",
+                        "location": ""}]
+                },
+                data: {}
+            });
+            next(e);
+        }
+    },
     list: async (req, res, next) => {
         try {
             const reg = await models.User.find().populate("offer");
